@@ -2,6 +2,8 @@ package com.saigontech.interviewsample;
 
 import java.util.Optional;
 
+import com.saigontech.interviewsample.entity.Person;
+import com.saigontech.interviewsample.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -28,19 +30,26 @@ public class InterviewSampleApplication implements CommandLineRunner{
 	@Autowired
 	private ArticleSpecificationFactory articleSpecificationFactory;
 
+	@Autowired
+	private PersonService service;
+
 	@Override
 	public void run(String... args) throws Exception{
 
-		//initiate();
-
-		//findAllWrittenBy();
-		//findAllTagsOfArticle();
-		//findByAuthorOrTitle();
-		//findAuthorOfArticleByTitle();
-
-		//findAllByTitle();
-		//findAllByTitlePart();
-		findAllArticlesWithTag();
+//		initiate();
+//
+//		findAllWrittenBy();
+//		findAllTagsOfArticle();
+//		findByAuthorOrTitle();
+//		findAuthorOfArticleByTitle();
+//
+//		findAllByTitle();
+//		findAllByTitlePart();
+//		findAllArticlesWithTag();
+		Person person = new Person();
+		person.setFirstName("Nhut");
+		service.addPerson(person);
+		service.addPet(person.getId(), "tien");
 	}
 
 	private void findAllByTitlePart(){
