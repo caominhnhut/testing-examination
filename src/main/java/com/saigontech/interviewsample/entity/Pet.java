@@ -20,9 +20,8 @@ public class Pet {
     public String getOwnerName() {
         if (owner != null) {
             return owner.getFirstName();
-        } else {
-            return null;
         }
+        return null;
     }
 
     public void setOwner(Person owner) {

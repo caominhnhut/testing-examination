@@ -4,12 +4,15 @@ import com.saigontech.interviewsample.entity.Person;
 import com.saigontech.interviewsample.entity.Pet;
 import com.saigontech.interviewsample.exception.PersonNotFoundException;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PersonService {
 
+    @PersistenceContext
     private final EntityManager entityManager;
 
     public PersonService(EntityManager entityManager) {
