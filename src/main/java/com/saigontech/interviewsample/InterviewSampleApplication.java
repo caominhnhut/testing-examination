@@ -2,14 +2,12 @@ package com.saigontech.interviewsample;
 
 import java.util.Optional;
 
-import com.saigontech.interviewsample.entity.Person;
+import com.saigontech.interviewsample.assignment1.service.Assignment1Service;
 import com.saigontech.interviewsample.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.saigontech.interviewsample.entity.Article;
@@ -33,8 +31,14 @@ public class InterviewSampleApplication implements CommandLineRunner{
 	@Autowired
 	private PersonService service;
 
+	@Autowired
+	private Assignment1Service assignment1Service;
+
 	@Override
 	public void run(String... args) throws Exception{
+
+		assignment1Service.persitAppUser();
+		assignment1Service.persitPerson();
 
 //		initiate();
 //
@@ -46,10 +50,10 @@ public class InterviewSampleApplication implements CommandLineRunner{
 //		findAllByTitle();
 //		findAllByTitlePart();
 //		findAllArticlesWithTag();
-		Person person = new Person();
-		person.setFirstName("Nhut");
-		service.addPerson(person);
-		service.addPet(person.getId(), "tien");
+//		Person person = new Person();
+//		person.setFirstName("Nhut");
+//		service.addPerson(person);
+//		service.addPet(person.getId(), "tien");
 	}
 
 	private void findAllByTitlePart(){

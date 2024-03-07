@@ -26,7 +26,7 @@ public class MoneyExam{
         public Money minus(Money _that) {
             BigDecimal a = new BigDecimal(_that.amount, MathContext.DECIMAL64);
             BigDecimal b = new BigDecimal(this.amount, MathContext.DECIMAL64);
-            BigDecimal val = a.subtract(b);
+            BigDecimal val = b.subtract(a);
             return new Money(Double.valueOf(String.valueOf(val)), currency);
         }
 

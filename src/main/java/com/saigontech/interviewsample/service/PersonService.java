@@ -19,11 +19,11 @@ public class PersonService {
         this.entityManager = entityManager;
     }
 
-    @Transactional
-    public void addPerson(Person person) {
-        entityManager.persist(person);
-        entityManager.flush();
-    }
+//    @Transactional
+//    public void addPerson(Person person) {
+//        entityManager.persist(person);
+//        entityManager.flush();
+//    }
 
     @Transactional
     public void addPet(Long personId, String petName) {
