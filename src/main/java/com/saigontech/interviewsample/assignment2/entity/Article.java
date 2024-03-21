@@ -1,4 +1,4 @@
-package com.saigontech.interviewsample.entity;
+package com.saigontech.interviewsample.assignment2.entity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "GUESTS")
-public class Guest extends Person {
+public class Guest extends Persons{
 
     @Column(name = "TEMPORARY_NAME")
     protected String tempName;

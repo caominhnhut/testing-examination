@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "USERS")
-public class AppUser extends Person {
+public class AppUser extends Persons{
 
     @Column(name = "LOGIN")
     protected String login;

@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "PERSONS")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Person {
+public class Persons{
 
     @Id
     @GeneratedValue
@@ -21,7 +21,7 @@ public class Person {
     @Column(name = "SESSION_ID")
     protected Long sessionId;
 
-    public Person(Long sessionId) {
+    public Persons(Long sessionId) {
         this.sessionId = sessionId;
     }
 }

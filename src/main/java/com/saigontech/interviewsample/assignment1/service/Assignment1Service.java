@@ -3,7 +3,7 @@ package com.saigontech.interviewsample.assignment1.service;
 import org.springframework.stereotype.Repository;
 
 import com.saigontech.interviewsample.assignment1.entity.AppUser;
-import com.saigontech.interviewsample.assignment1.entity.Person;
+import com.saigontech.interviewsample.assignment1.entity.Persons;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -23,7 +23,7 @@ public class Assignment1Service{
 
     @Transactional
     public void persitPerson(){
-        Person p = new Person(1L);
+        Persons p = new Persons(1L);
         entityManager.persist(p);
     }
 }

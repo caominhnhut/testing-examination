@@ -1,9 +1,9 @@
-package com.saigontech.interviewsample.repository;
+package com.saigontech.interviewsample.assignment2.repository;
 
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.saigontech.interviewsample.entity.Article;
+import com.saigontech.interviewsample.assignment2.entity.Article;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
@@ -14,7 +14,12 @@ import jakarta.persistence.criteria.Root;
 public class ArticleSpecificationFactory{
 
     public Specification<Article> allArticlesWithTag(String tag){
-        return (root, query, cb) -> cb.and(root.join("tags").in(tag));
+        return new Specification<Article>(){
+            @Override
+            public Predicate toPredicate(Root<Article> root, CriteriaQuery<?> query, CriteriaBuilder cb){
+                return cb.and(root.join("tags").in(tag));
+            }
+        };
     }
 
     public Specification<Article> byTitle(String title){

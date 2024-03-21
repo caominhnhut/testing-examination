@@ -1,7 +1,7 @@
 package com.saigontech.interviewsample.service;
 
-import com.saigontech.interviewsample.entity.Person;
-import com.saigontech.interviewsample.entity.Pet;
+import com.saigontech.interviewsample.assignment2.entity.Person;
+import com.saigontech.interviewsample.assignment2.entity.Pet;
 import com.saigontech.interviewsample.exception.PersonNotFoundException;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

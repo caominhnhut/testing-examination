@@ -10,10 +10,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.domain.Specification;
 
-import com.saigontech.interviewsample.entity.Article;
-import com.saigontech.interviewsample.entity.Author;
-import com.saigontech.interviewsample.repository.ArticleRepository;
-import com.saigontech.interviewsample.repository.ArticleSpecificationFactory;
+import com.saigontech.interviewsample.assignment2.entity.Article;
+import com.saigontech.interviewsample.assignment2.entity.Author;
+import com.saigontech.interviewsample.assignment2.repository.ArticleRepository;
+import com.saigontech.interviewsample.assignment2.repository.ArticleSpecificationFactory;
 
 @SpringBootApplication
 public class InterviewSampleApplication implements CommandLineRunner{
@@ -37,19 +37,19 @@ public class InterviewSampleApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception{
 
-		assignment1Service.persitAppUser();
-		assignment1Service.persitPerson();
+//		assignment1Service.persitAppUser();
+//		assignment1Service.persitPerson();
 
-//		initiate();
-//
-//		findAllWrittenBy();
-//		findAllTagsOfArticle();
-//		findByAuthorOrTitle();
-//		findAuthorOfArticleByTitle();
-//
-//		findAllByTitle();
-//		findAllByTitlePart();
-//		findAllArticlesWithTag();
+		//initiate();
+		findAllWrittenBy();
+		findAllTagsOfArticle();
+		findByAuthorOrTitle();
+		findAuthorOfArticleByTitle();
+
+		findAllByTitle();
+		findAllByTitlePart();
+		findAllArticlesWithTag();
+
 //		Person person = new Person();
 //		person.setFirstName("Nhut");
 //		service.addPerson(person);
